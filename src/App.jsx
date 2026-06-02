@@ -180,6 +180,44 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="relative overflow-hidden bg-[#020202] px-5 py-20 sm:px-8 lg:px-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,140,0.14),transparent_24%),radial-gradient(circle_at_80%_8%,rgba(0,140,255,0.16),transparent_20%),radial-gradient(circle_at_50%_50%,rgba(255,235,0,0.08),transparent_18%)]" />
+        <div className="relative mx-auto max-w-[92rem]">
+          <div className="mx-auto max-w-6xl text-center">
+            <h2 className="font-anton text-[clamp(2.4rem,5.8vw,4.6rem)] leading-none tracking-wide text-white sm:text-[4.6rem]">
+              ABOUT ME
+            </h2>
+
+            <div className="mx-auto mt-6 h-[2px] w-56 rounded-full bg-[linear-gradient(90deg,#ff2a2a,#ffd84d,#32ff9a,#2ed4ff,#8a4dff)]" />
+
+            <p className="mx-auto mt-10 max-w-5xl text-center text-[0.98rem] leading-[1.8] text-white/90 sm:text-[1.15rem]">
+              Welcome To The Cinematic World Of Sadeep Dai Don, Where Creativity Meets Technology To Craft Visually Stunning Narratives. With A Passion For Storytelling And A Keen Eye For Detail, I Embark On A Journey To Transform Ordinary Footage Into Extraordinary Visual Experiences.
+            </p>
+          </div>
+
+          <div className="mt-16 flex flex-col items-center gap-8 lg:mt-20 lg:flex-row lg:justify-between lg:gap-6">
+            <div className="flex items-center gap-4 text-[0.95rem] font-orbitron tracking-[0.08em] text-white sm:text-[1.15rem]">
+              <span>Cash Cow Editing</span>
+            </div>
+            <span className="hidden h-3 w-3 rounded-full bg-[linear-gradient(180deg,#ff2a2a,#ffd84d,#32ff9a,#2ed4ff,#8a4dff)] lg:block" />
+
+            <div className="flex items-center gap-4 text-[0.95rem] font-orbitron tracking-[0.08em] text-white sm:text-[1.15rem]">
+              <span>Reels Editing</span>
+            </div>
+            <span className="hidden h-3 w-3 rounded-full bg-[linear-gradient(180deg,#ff2a2a,#ffd84d,#32ff9a,#2ed4ff,#8a4dff)] lg:block" />
+
+            <div className="flex items-center gap-4 text-[0.95rem] font-orbitron tracking-[0.08em] text-white sm:text-[1.15rem]">
+              <span>Logo Animation</span>
+            </div>
+            <span className="hidden h-3 w-3 rounded-full bg-[linear-gradient(180deg,#ff2a2a,#ffd84d,#32ff9a,#2ed4ff,#8a4dff)] lg:block" />
+
+            <div className="flex items-center gap-4 text-[0.95rem] font-orbitron tracking-[0.08em] text-white sm:text-[1.15rem]">
+              <span>Podcast Edit</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
