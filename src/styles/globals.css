@@ -6,13 +6,43 @@
   body {
     @apply bg-darkBg text-gray-300 font-inter antialiased overflow-x-hidden selection:bg-neonViolet selection:text-white;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-anton tracking-wide text-white;
   }
 }
 
-/* Lenis Smooth Scroll Core Styles */
+@layer components {
+  /* ── Consistent 1200px container ── */
+  .site-container {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-10;
+  }
+
+  /* ── Section heading ── */
+  .section-title {
+    @apply font-anton text-[clamp(2.4rem,5.5vw,4.2rem)] leading-none tracking-wide text-white;
+  }
+
+  /* ── Form helpers ── */
+  .form-group {
+    @apply flex flex-col gap-2;
+  }
+
+  .form-label {
+    @apply font-orbitron text-[10px] tracking-[0.3em] text-white/45;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-white/[0.07] bg-white/[0.03] px-4 py-3.5 text-[0.92rem] text-white placeholder-white/25 outline-none transition-all duration-200
+           focus:border-[#a855f7]/40 focus:bg-white/[0.05] focus:ring-1 focus:ring-[#a855f7]/20;
+  }
+
+  .form-input option {
+    @apply bg-[#111] text-white;
+  }
+}
+
+/* ── Lenis Smooth Scroll ── */
 html.lenis, html.lenis body {
   height: auto;
 }
@@ -33,7 +63,7 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
-/* Custom Webkit Scrollbar */
+/* ── Custom Scrollbar ── */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -54,7 +84,7 @@ html.lenis, html.lenis body {
   background: #a855f7;
 }
 
-/* Glow Utilities */
+/* ── Glow Utilities ── */
 .text-glow-cyan {
   text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.3);
 }
@@ -78,7 +108,7 @@ html.lenis, html.lenis body {
   border-color: rgba(16, 185, 129, 0.3);
 }
 
-/* Glassmorphism Classes */
+/* ── Glassmorphism ── */
 .glass-nav {
   background: rgba(3, 3, 3, 0.7);
   backdrop-filter: blur(12px);
@@ -98,20 +128,20 @@ html.lenis, html.lenis body {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Grid overlay background */
+/* ── Grid Pattern ── */
 .bg-grid-pattern {
   background-size: 40px 40px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
 }
 
-/* Noise overlay */
+/* ── Noise Overlay ── */
 .noise-overlay {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
 }
 
-/* Custom Text Gradient */
+/* ── Text Gradients ── */
 .text-gradient-cyan-violet {
   background: linear-gradient(135deg, #00ffff 0%, #a855f7 100%);
   -webkit-background-clip: text;
@@ -130,16 +160,16 @@ html.lenis, html.lenis body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Floating Animations for Mockup Badges */
+/* ── Float Animations ── */
 @keyframes float-slow {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(4deg); }
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-12px) rotate(4deg); }
   100% { transform: translateY(0px) rotate(0deg); }
 }
 
 @keyframes float-delayed {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(12px) rotate(-4deg); }
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(12px) rotate(-4deg); }
   100% { transform: translateY(0px) rotate(0deg); }
 }
 
@@ -151,7 +181,7 @@ html.lenis, html.lenis body {
   animation: float-delayed 5.5s ease-in-out infinite;
 }
 
-/* Lightning & Badge Glow Filters */
+/* ── Glow Filters ── */
 .lightning-glow {
   filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.85)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));
 }
@@ -169,4 +199,3 @@ html.lenis, html.lenis body {
 .video-glow {
   box-shadow: 0 0 35px rgba(236, 72, 153, 0.15), 0 0 15px rgba(0, 255, 255, 0.1);
 }
-
